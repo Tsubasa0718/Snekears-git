@@ -1,0 +1,20 @@
+@use"../foundation/_mixin.scss" as *;
+
+.l-footer{
+    background-color: #121212;
+    color: #fff;
+  &__wrapper{
+    text-align: center;
+  }
+  &__copy{
+    padding: px-to-rem(10px) 0 px-to-rem(7px) 0;
+  }
+  &__link{
+    font-size: px-to-rem(20px);
+    padding-bottom: px-to-rem(20px);
+    transition: .3s all;
+    &:hover{
+        text-decoration: underline 1px solid #fff;
+    }
+  }
+}

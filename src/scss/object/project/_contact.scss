@@ -1,0 +1,29 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.p-contact{
+ padding: px-to-rem(50px) 0;
+ background-color: #121212;
+ color: #fff;
+ &__wrapper{
+    margin-top: space-to-clamp(20,30,375,1600);
+    display: flex;
+    justify-content: center;
+
+    @include responsive("phone"){
+     flex-direction: column;
+    }
+}
+
+&__text{
+    p:not(:first-of-type){
+     margin-top: px-to-rem(30px);
+    }
+}
+
+ &__form-body{
+  margin-left: px-to-rem(139px);
+  @include responsive("phone"){
+   margin:px-to-rem(30px) 0 0;
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "sneakers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "swiper": "^11.1.14",
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.79.4",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-sass": "^0.1.0",
+    "vite-plugin-static-copy": "^1.0.6"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "Firefox ESR",
+    "not dead"
+  ]
+}

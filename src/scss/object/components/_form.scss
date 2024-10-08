@@ -1,0 +1,31 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.c-form{
+    &__item{
+        display: flex;
+        flex-direction: column;
+    }
+    &__item:not(:first-child){
+        margin-top: px-to-rem(20px);
+    }
+    &__input{
+      width: 545px;
+      height: 44px;
+      background-color: #fff;
+      @include responsive("phone"){
+        width: 100%;
+      }
+    }
+    &__textarea{
+        width: 545px;
+        height: 68px;
+        background-color: #fff;
+        @include responsive("phone"){
+            width: 100%;
+
+          }
+    }
+    &__btn{
+     margin-top: px-to-rem(20px);
+    }
+}

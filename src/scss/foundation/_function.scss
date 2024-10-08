@@ -1,0 +1,27 @@
+@use "sass:math";
+@function space-to-clamp($min, $max, $minViewport, $maxViewport) {
+  $vwScale: math.div(
+    $max - $min,
+    $maxViewport - $minViewport
+  ); // vw単位でのスケールを計算
+  $baseOffset: $min - $minViewport * $vwScale; // 基準となる最小値からのオフセットを計算
+
+  $minRem: math.div($min, 16); // 最小値をremに変換
+  $maxRem: math.div($max, 16); // 最大値をremに変換
+  $baseOffsetRem: math.div($baseOffset, 16); // オフセットをremに変換
+  $vwScaleRem: $vwScale * 100; // vwスケールを調整
+
+  @return clamp(
+    #{$minRem}rem,
+    #{$baseOffsetRem}rem + #{$vwScaleRem}vw,
+    #{$maxRem}rem
+  );
+}
+
+// 基準となるフォントサイズを設定
+$base-font-size: 16px;
+
+// pxをremに変換する関数
+@function px-to-rem($px) {
+  @return #{math.div($px, $base-font-size)}rem;
+}

@@ -1,0 +1,9 @@
+@use "../../foundation/_mixin.scss" as *;
+
+.p-mv{
+ &__video--video{
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+    }
+}

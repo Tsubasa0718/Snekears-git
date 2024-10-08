@@ -1,0 +1,66 @@
+@use"../../foundation/_mixin.scss" as *;
+
+.c-menubtn{
+    position: fixed;
+    top: 1%;
+    right: 3%;
+    z-index: 120;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  @include responsive("phone"){
+    top: 2%;
+  }
+    span{
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+    &:nth-child(1) {
+        top: 35%;
+      }
+    &:nth-child(2) {
+        top: 50%;
+      }
+    &:nth-child(3) {
+        top: 65%;
+      }
+   }
+ &.active{
+    span:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        }
+         span:nth-child(2) {
+          opacity: 0;
+        }
+         span:nth-child(3) {
+          transform: translate(-50%, -50%) rotate(-45deg);
+              top: 50%;
+        }
+ }
+}
+
+// submit
+
+.c-btn--submit{
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  padding: px-to-rem(12px) 0;
+  border: 1px solid #fff;
+  transition: .3s all;
+  @include responsive("phone"){
+    width: 100%;
+  }
+  &:hover{
+    background-color: #fff;
+    color: #121212;
+  }
+}
