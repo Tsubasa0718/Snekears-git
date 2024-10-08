@@ -33,6 +33,9 @@
       }
    }
  &.active{
+   span{
+    background-color: #fff;
+   }
     span:nth-child(1) {
         transform: translate(-50%, -50%) rotate(45deg);
         top: 50%;

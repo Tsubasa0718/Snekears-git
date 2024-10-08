@@ -1,2 +1,2 @@
-import{i as e}from"./menu.js";document.addEventListener("DOMContentLoaded",()=>{e()});
+import{i as e}from"./scroll.js";document.addEventListener("DOMContentLoaded",()=>{e()});
 //# sourceMappingURL=main.js.map
